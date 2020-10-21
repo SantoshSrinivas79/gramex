@@ -482,6 +482,6 @@ def handler(func):
                                 kwargs[arg] = argtype.__origin__(map(member_type, kwargs[arg]))
                             else:
                                 continue
-        return json.dumps(func(*args, **kwargs))
+        return func(*args, **kwargs)
 
     return wrapper

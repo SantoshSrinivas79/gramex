@@ -1,47 +1,7 @@
 import json
-from typing import List
 
 from . import TestGramex
 from gramex.http import FOUND
-from gramex.transforms import handler
-
-
-@handler
-def total(*items: float) -> float:
-    return sum(items)
-
-
-@handler
-def total_list(items: List[int], start: float) -> float:
-    return sum(items, start)
-
-
-@handler
-def strtotal(*items: str) -> str:
-    s = ''
-    for i in items:
-        s += i
-    return s
-
-
-@handler
-def name_age(name, age):
-    return f'{name} is {age} years old.'
-
-
-@handler
-def urlparse_hinted(name: str, age: int) -> str:
-    return f'{name} is {age} years old.'
-
-
-@handler
-def native_types(a: int, b: float, c: bool, d: None):
-    return {'msg': f'{a} items @ {b} each together cost {a * b}.', 'c': c, 'd': d}
-
-
-@handler
-def greet(name="Stranger"):
-    return f'Hello, {name}!'
 
 
 class TestFunctionHandler(TestGramex):

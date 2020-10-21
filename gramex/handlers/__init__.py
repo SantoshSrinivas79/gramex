@@ -4,6 +4,7 @@ Handlers
 
 from .basehandler import BaseHandler, BaseWebSocketHandler, SetupFailedHandler
 from .functionhandler import FunctionHandler
+from .function import Function
 from .websockethandler import WebSocketHandler
 from .filehandler import FileHandler
 from .authhandler import GoogleAuth, SimpleAuth, LogoutHandler
@@ -33,6 +34,7 @@ __all__ = [
     'FilterHandler',
     'FormHandler',
     'FunctionHandler',
+    'Function',
     'GoogleAuth',
     'JSONHandler',
     'LogoutHandler',
